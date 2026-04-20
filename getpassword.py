@@ -33,7 +33,29 @@ def load_data():
        choice = input("1. Enter password " \ "\n2. Generate strong password: ")
 
        if choice == "2":
-            pwd = generate_password()
-           print(f"Generated Password: {pwd}")
+            pwd = generate_password
+            print(f"Generated Password: {pwd}")
        else:
+           pwd = getpass("Enter Password: {pwd}")
 
+       data[site] = {"username": username, "password": pwd}
+       save_data(data)
+       print("Saved successfully")
+
+    def get_password():
+        data = load_data()
+        site = input("Website/App name: ").strip()
+        if site in data:
+            print(f"\nSite: {site}")
+            print(f"Username: {data[site]['username']}"
+            print(f"Password: {data[site]['password']}"
+        else:
+            print("Not found")
+
+    def main():
+        while True:
+            print("\n1. Add Password" \
+                  "\n2. Get Password" \
+                  "\n3. Exit")
+            ch = input("Choose: ")
+            
