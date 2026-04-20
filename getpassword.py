@@ -58,4 +58,9 @@ def load_data():
                   "\n2. Get Password" \
                   "\n3. Exit")
             ch = input("Choose: ")
-            
+            if ch == "1": add_password()
+            elif ch == "2": get_password()
+            elif ch == "3": break
+
+    if __name__ == "__main__":
+        main()
