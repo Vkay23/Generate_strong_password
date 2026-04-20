@@ -33,4 +33,7 @@ def load_data():
        choice = input("1. Enter password " \ "\n2. Generate strong password: ")
 
        if choice == "2":
-            pwd = generate_password
+            pwd = generate_password()
+           print(f"Generated Password: {pwd}")
+       else:
+
